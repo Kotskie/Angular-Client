@@ -1,0 +1,68 @@
+<div class="width-100 fx-jc-center">
+  <h1 class="fx fx-jc-center">Star Wars Characters</h1>
+<div class="fx fx-jc-center" >
+  <mat-form-field class="width-60 example-form-field fx-jc-center">
+    <mat-label>Search Character</mat-label>
+    <input matInput type="text" [(ngModel)]="searchValue">
+  </mat-form-field>
+</div>
+
+<div class="fx fx-jc-center">
+  <div class="example-button-row fx fx-jc-center">
+    <button mat-raised-button color="primary" type="button" class=" fx fx-jc-center btn m-l-10 m-r-10" *ngIf="searchValue"  aria-label="Clear" (click)="clearSearched()">Clear Search</button>
+    <button mat-raised-button color="warn" type="button" class=" fx fx-jc-center btn m-l-10 m-r-10" *ngIf="searchValue" aria-label="Clear" (click)="searchPeople()">Search Character</button>
+  </div>
+</div>
+<div class="fx width-100 fx-jc-center fx-ai-center">
+<mat-spinner diameter="50" *ngIf="isLoading"></mat-spinner>
+<div *ngIf="!isLoading" class="fx width-100 fx-jc-center fx-ai-center">
+
+  <div class="fx fx-row fx-flow">
+    <mat-card *ngFor="let person of people" class="example-card shadow-5">
+      <mat-card-header class="fx fx-jc-center">
+        <mat-card-title class="fx fx-jc-center">{{ person.name }}</mat-card-title>
+      </mat-card-header>
+
+      <img mat-card-image [src]='ImageFromName(person.name)' alt="Photo of {{ person.name }}">
+      
+      <mat-card-content>
+        <div class="fx fx-row">
+          <p class="fw-80">Height:<span class="fw-50 m-r-10 m-l-10">{{person.height}}</span></p>
+          <p class="fw-80">Mass:<span class="fw-50 m-r-10 m-l-10">{{person.mass}}</span></p>
+          <p class="fw-80">Gender:<span class="fw-50 m-r-10 m-l-10">{{person.gender}}</span></p>
+        </div>
+      </mat-card-content>
+
+      <mat-card-actions>
+        <button mat-button (click)="goToCharacterDetails(person)">More Info</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  </div>
+  
+</div>
+
+  <!-- <div class="pagination">
+    <button *ngIf="page.previous" (click)="onPageChange(currentPage - 1)">Prev</button>
+    <span>Page {{ currentPage }} of {{ getPageCount() }}</span>
+    <button *ngIf="page.next" (click)="onPageChange(currentPage + 1)">Next</button>
+  </div>
+  
+</div> -->
+
+<div *ngIf="!(searchValue.length > 0)" class="width-100 fx fx-jc-space-even">
+  <div class="width-100 fx-row fx fx-jc-space-even">
+    <div>
+      <button mat-raised-button color="primary" type="button" class=" fx fx-jc-center btn m-l-10 m-r-10"  aria-label="Clear" (click)="prevPage()">Prev Page</button>
+    </div>
+    <div>
+      <span>Page {{ currentPage }} of {{ getCount() }}</span>
+    </div>
+
+    <div>
+      <button mat-raised-button color="warn" type="button" class=" fx fx-jc-center btn m-l-10 m-r-10" aria-label="Clear" (click)="nextPage()">Next Page</button>
+    </div>
+  </div>
+</div>
+</div>

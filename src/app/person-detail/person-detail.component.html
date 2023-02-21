@@ -1,0 +1,38 @@
+<div class="fx fx-row fx-flow fx-jc-center">
+  <div class="example-card shadow-5">
+    <mat-card-header class="fx fx-jc-center">
+      <h1 class="fx fx-jc-center">{{ person.name }}</h1>
+    </mat-card-header>
+
+    <img mat-card-image [src]='ImageFromName(person.name)' alt="Photo of {{ person.name }}">
+    
+    <div class="width-100 fx-jc-center">
+      <div class="fx fx-row fx-jc-center">
+        <p class="fw-80">Height:<span class="fw-50 m-r-10 m-l-10">{{person.height}}</span></p>
+        <p class="fw-80">Mass:<span class="fw-50 m-r-10 m-l-10">{{person.mass}}</span></p>
+        <p class="fw-80">Gender:<span class="fw-50 m-r-10 m-l-10">{{person.gender}}</span></p>
+      </div>
+      <div class="fx fx-row fx-jc-center">
+        <p class="fw-80">Name:<span class="fw-50 m-r-10 m-l-10">{{homeWorldInformation.name}}</span></p>
+        <p class="fw-80">Rotation Period:<span class="fw-50 m-r-10 m-l-10">{{homeWorldInformation.rotation_period}}</span></p>
+        <p class="fw-80">Orbital:<span class="fw-50 m-r-10 m-l-10">{{homeWorldInformation.orbital_period}}</span></p>
+        <p class="fw-80">Diameter:<span class="fw-50 m-r-10 m-l-10">{{homeWorldInformation.diameter}}</span></p>
+      </div>
+      <div class="fx fx-row fx-jc-center">
+        <p class="fw-80">Climate:<span class="fw-50 m-r-10 m-l-10">{{homeWorldInformation.climate}}</span></p>
+        <p class="fw-80">Gravity:<span class="fw-50 m-r-10 m-l-10">{{homeWorldInformation.gravity}}</span></p>
+        <p class="fw-80">Terrain:<span class="fw-50 m-r-10 m-l-10">{{homeWorldInformation.terrain}}</span></p>
+        <p class="fw-80">SurfaceWater:<span class="fw-50 m-r-10 m-l-10">{{homeWorldInformation.surface_water}}</span></p>
+        <p class="fw-80">Population:<span class="fw-50 m-r-10 m-l-10">{{homeWorldInformation.population}}</span></p>
+      </div>
+    </div>
+
+    <div class="width-100 fx fx-jc-space-even">
+      <div class="width-100 fx-row fx fx-jc-space-even">
+        <div>
+          <button mat-raised-button color="primary" type="button" class=" fx fx-jc-center btn m-l-10 m-r-10"  aria-label="Clear" (click)="goToHome()">Navigate Back</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

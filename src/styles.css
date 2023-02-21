@@ -1,0 +1,142 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+mat-card {
+    outline: 1px solid lightgray !important;
+    border-radius: 10px !important;
+    min-width: 150px;
+    max-width: 300px;
+    margin: 10px;
+    flex-flow: row wrap;
+  }
+
+.fx-flow {
+    flex-flow: row wrap
+}
+
+.fx {
+    display: flex;
+}
+
+.fx-row {
+    flex-direction: row;
+}
+
+.fx-col {
+    flex-direction: column;
+}
+
+.fw-20 {
+    font-weight: 200;
+}
+
+.fw-30 {
+    font-weight: 300;
+}
+
+.fw-40 {
+    font-weight: 400;
+}
+
+.fw-50 {
+    font-weight: 500;
+}
+
+.fw-60 {
+    font-weight: 600;
+}
+
+.fw-70 {
+    font-weight: 700;
+}
+
+.fw-80 {
+    font-weight: 800;
+}
+
+.m-l-10{
+    margin-left: 10px;
+}
+
+.m-r-10{
+    margin-right: 10px;
+}
+
+.fx-jc-center {
+    justify-content: center;
+}
+
+.fx-jc-space-between {
+    justify-content: space-between;
+}
+
+.fx-jc-space-even {
+    justify-content: space-evenly;
+}
+
+.fx-ai-center {
+    align-items: center;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.width-90 {
+    width: 90%;
+}
+
+.width-80 {
+    width: 80%;
+}
+
+.width-70 {
+    width: 70%;
+}
+
+.width-60 {
+    width: 60%;
+}
+
+.width-50 {
+    width: 50%;
+}
+
+section {
+    display: table;
+  }
+  
+  .example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+  }
+  
+  .example-button-row {
+    display: table-cell;
+    max-width: 600px;
+  }
+  
+  .example-button-row .mat-mdc-button-base {
+    margin: 8px 8px 8px 0;
+  }
+  
+  .example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+  }
+
+.btn{
+    width: 150px;
+    padding: 5px;
+    margin: 5px;
+}
