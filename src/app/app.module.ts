@@ -101,7 +101,8 @@ import { SwapiService } from './services/swapi.service';
   providers: [
     NavigationService,
     PersonService,
-    SwapiService
+    SwapiService,
+    Location
   ],
   bootstrap: [AppComponent]
 })
